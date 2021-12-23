@@ -1,0 +1,29 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^7.0.0-alpha.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasmin3ashl3y/tech-blog.git"
+  },
+  "author": "jasmin3ashl3y",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasmin3ashl3y/tech-blog/issues"
+  },
+  "homepage": "https://github.com/jasmin3ashl3y/tech-blog#readme"
+}
