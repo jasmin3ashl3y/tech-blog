@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment} = require('../models');
 const withAuth = require('../utils/auth');
-//const post = dbPostData.get({ plain: true });
 
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
@@ -16,6 +15,7 @@ router.get('/', withAuth, (req, res) => {
           'post_url',
           'title',
           'created_at',
+          [sequelize.literal('(SELECT COUNT (*) FROM comment WHERE post.id = comment.post_id)'), 'comment_count']
         ],
         include: [
           {
@@ -50,6 +50,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'post_url',
       'title',
       'created_at',
+      [sequelize.literal('(SELECT COUNT (*) FROM comment WHERE post.id = comment.post_id)'), 'comment_count']
     ],
     include: [
       {

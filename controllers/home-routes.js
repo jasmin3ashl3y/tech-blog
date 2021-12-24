@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
           'post_url',
           'title',
           'created_at',
+          [sequelize.literal('(SELECT COUNT (*) FROM comment WHERE post.id = comment.post_id)'), 'comment_count']
         ],
         include: [
           {
@@ -51,6 +52,7 @@ router.get('/post/:id', (req, res) => {
       'post_url',
       'title',
       'created_at',
+      [sequelize.literal('(SELECT COUNT (*) FROM comment WHERE post.id = comment.post_id)'), 'comment_count']
     ],
     include: [
       {
