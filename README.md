@@ -4,11 +4,11 @@ This is a basic tech blog used as an example to practise making blog sites. User
 
 ## Screenshots
 
-![Login](login.PNG)
+![Login](public/images/login.PNG)
 
-![Create Post](create-post.PNG)
+![Create Post](public/images/create-post.PNG)
 
-![First Post](first-post.PNG)
+![First Post](public/images/first-post.PNG)
 
 ## Deployed App
 
